@@ -17,4 +17,4 @@ The primary, citable version of this work is archived at Zenodo:
 ## Usage
 Run the script to perform one optimization iteration:
 ```bash
-python gpr_optimization_code.py
+python GPR_AgNW.py
