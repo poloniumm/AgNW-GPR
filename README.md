@@ -2,19 +2,31 @@
 The primary, citable version of this work is archived at Zenodo:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19206263.svg)](https://doi.org/10.5281/zenodo.19206263)
 
-# Code and data for: Multi-objective Bayesian optimization of AgNW spray-coating for transparent conducting electrodes
+# Gaussian Process Bayesian Optimization for Ag Nanowire Films
 
-## Contents
-- `my_data_cleaned.csv`: Experimental dataset (95 points) with three input parameters (ultrasonic power, flow rate, PVP concentration) and measured properties (optical transmittance T, sheet resistance Rₛ).
-- `GPR_AgNW.py`: Python code implementing GPR-based Bayesian optimization.
+This repository contains a Gaussian Process Regression (GPR) based Bayesian Optimization framework for multi-objective optimization of transparent conductive Ag nanowire films.
 
-## Requirements
-- Python 3.8+
-- numpy
-- pandas
-- scikit-learn
+## Objectives
+- Maximize optical transmittance
+- Minimize sheet resistance
 
-## Usage
-Run the script to perform one optimization iteration:
+## Method Overview
+The workflow includes:
+- Experimental data loading
+- Leave-One-Out Cross Validation (LOOCV)
+- Gaussian Process surrogate modeling
+- Pareto front filtering
+- Bayesian Optimization with uncertainty-aware acquisition
+- Proposal of new experimental conditions
+
+## Files
+- `notebooks/AgNW_GPR_Colab.ipynb` — main notebook
+- `data_GPR.csv` — experimental dataset
+- `requirements.txt` — dependencies
+
+## How to Run
+Open the notebook in Google Colab or Jupyter and run all cells sequentially.
+
+Install dependencies:
 ```bash
-python GPR_AgNW.py
+pip install -r requirements.txt
